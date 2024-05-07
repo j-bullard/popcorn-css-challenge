@@ -1,5 +1,114 @@
-/*COLORS:
-Header background - #FFDBAA
-button - #805215
-Header Text - #553100
-Main background - #D4A76A*/
+:root {
+  --main-bg-color: #d4a76a;
+  --header-bg-color: #ffdbaa;
+  --header-border-color: #805215;
+  --button-bg-color: #805215;
+  --button-text-color: #ffffff;
+  --card-bg-color: #ffffff;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  border-bottom: 1px solid var(--header-border-color);
+  height: 72px;
+
+  & .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.container {
+  max-width: 65rem;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 40px 0;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-bar-item {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 8px 12px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  place-items: center;
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.col-span-3 {
+  grid-column: 1 / span 3;
+}
+
+.card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--card-bg-color);
+  padding: 12px;
+  gap: 8px;
+  max-width: 250px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card:nth-of-type(1) {
+  margin-right: auto;
+}
+
+.card:nth-of-type(3) {
+  margin-left: auto;
+}
+
+.card:last-of-type {
+  max-width: 100%;
+}
+
+.card-title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-content {
+  font-size: 14px;
+}
+
+.card-button {
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 12px 12px;
+  font-weight: 600;
+  border: unset;
+}
